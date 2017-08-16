@@ -1,5 +1,16 @@
 Notes:
-The implementation of State uses the Strategy Pattern.
+The implementation of State uses the Strategy Pattern in simple application. 
+The application presents a car, which has a set of gears that it uses to drive at various speeds. 
+Each gear can only support a specific speed range, and outside of that a gear change is needed. 
+The control is via a simple GUI.
+
+Changes in the slider create an event which arrives at the ActionListener of the GUI. 
+The actual logic for each state is very simple, basically the series of nested if statements 
+represents the various states. 
+
+The basic idea of course is to replace the single complex if statement with polymorphism 
+over the set of concrete states. You also need to consider the context object, which manages the states.
+
 Applying the State pattern: 
 
 	- created an Interface State with the methods: 
